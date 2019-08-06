@@ -1,0 +1,93 @@
+html {
+    background: #202124;
+}
+
+body {
+    color: #fff;
+}
+
+h3 {
+    color: #fff;
+}
+
+.page {
+    background: #202124;
+}
+
+header.page-header .inner h1 {
+    color: #000;
+    color: #9aa0a6;
+}
+
+header.page-header .inner {
+    background: #414141;
+}
+
+a {
+    color: #aecbfa;
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+:-moz-placeholder {
+    color: #fff;
+}
+
+::-moz-placeholder {
+    color: #fff;
+}
+
+:-ms-input-placeholder {
+    color: #fff;
+}
+
+html.old-ie .old-ie-message {
+    background-color: #ffaeae;
+    color: #fff;
+}
+
+.comparison h4 {
+    color: #666;
+}
+
+header.search input[type="search"] {
+    background: #313235;
+    color: #fff;
+}
+
+header.search input[type="search"]:focus {
+    background: #313235;
+    color: #fff;
+}
+
+.alternatives-block h4 {
+    color: #666;
+}
+
+section {
+    background: #0a0a0a;
+}
+
+section.odd {
+    background: #0a0a0a;
+}
+
+section.odd :not(pre)>code[class*="language-"],
+section.odd pre[class*="language-"] {
+    background: #2d2d2d;
+}
+
+section h2 {
+    color: #888;
+}
+
+input[type='range'] {
+    background-color: #f0f0f0;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    border: 2px solid #ccc;
+    background-color: #fcfcfc;
+}

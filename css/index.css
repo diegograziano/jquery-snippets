@@ -12,23 +12,6 @@ html {
 
 a {
     cursor: pointer;
-    color: #08c;
-}
-
-::-webkit-input-placeholder {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-:-moz-placeholder {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-::-moz-placeholder {
-    color: rgba(0, 0, 0, 0.5);
-}
-
-:-ms-input-placeholder {
-    color: rgba(0, 0, 0, 0.5);
 }
 
 input[type="search"][required] {
@@ -74,19 +57,14 @@ input[type="search"][required]:invalid::-webkit-search-cancel-button:after {
 
 body {
     font-family: "proxima-nova", "Helvetica Neue", Helvetica, arial, sans-serif;
-    color: #444;
     margin: 0;
     -webkit-font-smoothing: antialiased;
-}
-
-.page {
-    background: #fff;
 }
 
 header.page-header {
     width: 44em;
     max-width: 100%;
-    padding: 9em 0 2em;
+    padding: 2em 0 2em;
     margin: 0 auto;
     text-align: center;
 }
@@ -107,7 +85,6 @@ header.page-header {
 
 header.page-header .inner {
     padding: 3em 2em 2.4em;
-    background: #414141;
     max-height: 178px;
 }
 
@@ -115,7 +92,6 @@ header.page-header .inner h1 {
     font-size: 2.5em;
     font-weight: 200;
     margin: 0;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.01em;
     line-height: 1;
@@ -185,7 +161,7 @@ header.page-header .inner h1 {
     .browser {
         float: right;
         clear: right;
-        width: 49%;
+        width: 99%;
     }
     .browser.jquery {
         float: left;
@@ -200,9 +176,7 @@ header.page-header .inner h1 {
 
 html.old-ie .old-ie-message {
     display: block;
-    background-color: #ffaeae;
     padding: 10px;
-    color: #fff;
 }
 
 .empty-message {
@@ -243,7 +217,7 @@ html.old-ie .old-ie-message {
 }
 
 .comparison h3 a:hover:before {
-    content: '§';
+    content: '#';
     position: absolute;
     right: 100%;
     padding-right: 0.3em;
@@ -251,7 +225,6 @@ html.old-ie .old-ie-message {
 
 .comparison h4 {
     font-weight: 200;
-    color: #666;
     letter-spacing: 0.07em;
     font-size: 1.4em;
     text-transform: uppercase;
@@ -288,7 +261,6 @@ header.search input[type="search"] {
     margin: 0;
     color: inherit;
     width: 50%;
-    background: rgba(0, 0, 0, 0.1);
     margin-bottom: 4px;
     width: 100%;
     padding: 1em;
@@ -309,7 +281,6 @@ header.search input[type="search"]::-webkit-search-cancel-button:after {
 }
 
 header.search input[type="search"]:focus {
-    background: rgba(0, 0, 0, 0.05);
     opacity: 1;
     -ms-filter: none;
     filter: none;
@@ -349,7 +320,6 @@ header.search .field .slider {
     font-size: 1.1em;
     display: inline-block;
     font-weight: 200;
-    color: #666;
     letter-spacing: 0.07em;
     font-size: 1.4em;
     text-transform: uppercase;
@@ -372,17 +342,20 @@ section {
     /* Hide section titles when they're empty */
     position: relative;
     overflow: hidden;
-    background: #fff;
-    padding: 5.5em 0;
+    /* padding: 5.5em 0; */
 }
 
-section.odd {
-    background: #eee;
+#input_container {
+    position: relative;
 }
 
-section.odd :not(pre)>code[class*="language-"],
-section.odd pre[class*="language-"] {
-    background: #fff;
+.close-button {
+    position: absolute;
+    bottom: 42%;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
 }
 
 section .inner {
@@ -402,7 +375,6 @@ section h2 {
     font-weight: 100;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: #888;
     text-align: center;
     margin: 0;
 }
@@ -410,7 +382,6 @@ section h2 {
 input[type='range'] {
     -webkit-appearance: none !important;
     margin: 0;
-    background-color: #f0f0f0;
     height: 30px;
     width: 100%;
     padding: 4px;
@@ -420,10 +391,8 @@ input[type='range']::-webkit-slider-thumb {
     -webkit-appearance: none !important;
     height: 20px;
     width: 20px;
-    border: 2px solid #ccc;
     -webkit-border-radius: 5px;
     border-radius: 5px;
-    background-color: #fcfcfc;
 }
 
 .range-label {
@@ -477,4 +446,91 @@ footer a {
     .github-corner .octo-arm {
         animation: octocat-wave 560ms ease-in-out
     }
+}
+
+@media (min-width: 1025px) {
+    .banderas {
+        position: absolute;
+        top: 10px;
+        right: 100px;
+    }
+    .modo {
+        position: absolute;
+        top: 8px;
+        right: 130px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .banderas {
+        display: none;
+    }
+    .modo {
+        display: none;
+    }
+}
+
+.flag-icon {
+    -webkit-box-shadow: 0 2px 5px 0 rgba(49, 49, 93, .1), 0 1px 2px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 2px 5px 0 rgba(49, 49, 93, .1), 0 1px 2px 0 rgba(0, 0, 0, .08);
+    cursor: pointer;
+    border: 1px solid #fff;
+    background-color: #fff;
+    display: inline-block;
+    width: 1.333333em;
+    line-height: 1em;
+    background-size: contain;
+    background-position: 50%;
+    background-repeat: no-repeat;
+}
+
+.flag-icon-es {
+    background-image: url(../img/es.cc1b41b0.svg);
+}
+
+.flag-icon-us {
+    background-image: url(../img/us.ae656592.svg);
+}
+
+.flag-icon-it {
+    background-image: url(../img/it.8d15de04.svg);
+}
+
+.boton-modo {
+    cursor: pointer;
+}
+
+.el-dropdown-menu {
+    position: absolute;
+    margin-top: 12px;
+    right: 100px;
+    top: 35px;
+    z-index: 2000;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(49, 49, 93, .1), 0 1px 2px 0 rgba(0, 0, 0, .08);
+    box-shadow: 0 2px 5px 0 rgba(49, 49, 93, .1), 0 1px 2px 0 rgba(0, 0, 0, .08);
+    cursor: pointer;
+    border: 1px solid #fff;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.el-dropdown-menu li {
+    list-style-type: none;
+    list-style: none;
+    line-height: 36px;
+    padding: 0 20px;
+    margin: 0;
+    font-size: 14px;
+    color: #606266;
+    cursor: pointer;
+    outline: none;
+}
+
+.el-dropdown-menu li:hover {
+    color: #7fa5e5;
+    background: #eff4fc;
+}
+
+.mr-15 {
+    margin-right: 15px;
 }
